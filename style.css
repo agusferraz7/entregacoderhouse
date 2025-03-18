@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #151515;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* nav */
+
+.navbar-brand img{
+    width: 150px;
+}
+
+.navbar-nav{
+    align-items: center;
+}
+
+.a-color ul li a{
+    color: rgb(181, 178, 178);
+}
+
+p a{
+    color: rgb(190, 190, 190);
+}
+
+.title-color{
+    font-size: 20px;
+    color: rgb(127, 15, 15);
+    text-align: center;
+}
+
+p{
+    color: rgb(190, 190, 190);
+    text-align: center;
+}
+
+/* fotos index */
+
+.foto-index{
+    width: 100vh;
+}
+
+/* integrantes */
+
+.integrantes{
+    width: 100vh;
+}
+
+.title-integrantes{
+    text-align: center;
+    margin: 30px;
+}
+
+.grid-integrantes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: 50px;
+}
+
+
+/* canciones */
+
+.decoration-none a{
+    text-decoration: none;
+}
+
+.cd-container, .cd-container-two{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.cd-first{
+    justify-items: center;
+    width: 30%;
+    line-height: 30px;
+}
+
+.cd-second{
+    justify-items: center;
+    width: 30%;
+    line-height: 30px;
+    padding-top: 30px;
+}
+
+/* fotos de shows */
+
+.fotos-title-style{
+    margin: 30px;
+    text-align: center;
+}
+
+.pics-grid img{
+    width: 100vh;
+    height: 70vh;
+    border-radius: 5px;
+}
+
+.pics-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    justify-items: center;
+}
+
+/* contacto */
+
+
+
+footer{
+    text-align: center;
+    font-size: 11px;
+    font-style: italic;
+    color: rgb(227, 221, 213);
+    margin: 30px 0 10px 0;
+}
