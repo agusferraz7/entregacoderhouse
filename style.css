@@ -28,11 +28,7 @@ body{
     align-items: center;
 }
 
-/* página de inicio */
-
-.portada{
-    border-radius: 40px;
-}
+/* index */
 
 h1, h2, h3, h4, h5, h6{
     font-size: 20px;
@@ -136,6 +132,25 @@ footer{
 
 
 /* Media Queries */
+
+/*index mobile*/
+
+@media (max-width: 768px) {
+    .portada{
+        margin-top: 30px;
+    }
+}
+
+/*index tablets*/
+
+@media (min-width: 600px) {
+    .portada{
+        margin-top: 30px;
+    }
+    .index-title{
+        font-size: 25px;
+    }
+}
 
 /*integrantes mobile*/
 
