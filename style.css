@@ -17,21 +17,25 @@ body{
 }
 
 .buick-bg{
-    background-color: #141313;
+    background-color: #000000;
 }
 
 .navbar-nav li a{
-    color: rgb(181, 178, 178);
+    color: rgba(181, 178, 178, 0.849);
+}
+
+.navbar-nav li a:hover{
+    color: rgba(177, 21, 21, 0.736);
 }
 
 .navbar-nav{
     align-items: center;
 }
 
-/* index */
+/* index - general */
 
 h1, h2, h3, h4, h5, h6{
-    font-size: 20px;
+    font-size: 18px;
     color: rgba(177, 21, 21, 0.736);
     font-weight: bold;
 }
@@ -51,12 +55,6 @@ p{
 
 /* integrantes */
 
-.integrantes{
-    width: 100vh;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
 .title-integrantes{
     text-align: center;
     margin: 50px 0 50px 0;
@@ -65,10 +63,23 @@ p{
 .grid-integrantes{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    row-gap: 40px;
+    column-gap: 5px;
 }
 
+.integrantes{
+    width: 50%;
+    border-radius: 5px;
+}
+
+.title-cada{
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.grid-integrantes p{
+    font-size: 14px;
+    margin-bottom: 40px;
+}
 
 /* canciones */
 
@@ -77,25 +88,15 @@ p{
     color: rgb(181, 178, 178);
 }
 
-.cd-container, .cd-container-two{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+.decoration-none a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.cd-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 70px;
     margin-top: 50px;
-}
-
-.cd-first{
-    justify-items: center;
-    width: 30%;
-    line-height: 30px;
-}
-
-.cd-second{
-    justify-items: center;
-    width: 30%;
-    line-height: 30px;
-    padding-top: 30px;
 }
 
 /* fotos de shows */
@@ -127,7 +128,7 @@ footer{
     font-size: 11px;
     font-style: italic;
     color: rgb(227, 221, 213);
-    margin: 30px 0 10px 0;
+    margin: 30px 0 5px 0;
 }
 
 
@@ -137,7 +138,8 @@ footer{
 
 @media (max-width: 768px) {
     .portada{
-        margin-top: 30px;
+        margin-top: 0;
+        padding: 0;
     }
 }
 
@@ -145,63 +147,83 @@ footer{
 
 @media (min-width: 600px) {
     .portada{
-        margin-top: 30px;
+        margin-top: 0;
+        padding: 0;
     }
     .index-title{
         font-size: 25px;
     }
 }
 
+/*index desktop*/
+
+@media (min-width: 1024px) {
+    .add-center{
+        text-align: center;
+    }
+    .portada{
+        margin-top: 0px;
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+    }
+}
+
 /*integrantes mobile*/
 
-@media screen {
-    body{
-        font-size: 16px;
-    }
+@media (max-width: 768px) {
     .grid-integrantes{
         grid-template-columns: 1fr;
-        justify-content: center;
-        row-gap: 30px;
+    }
+    .title-integrantes{
+    font-size: 16px;
     }
     .integrantes{
         width: 100%;
-        height: auto;
     }
     .title-cada{
-        font-size: 18px;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .grid-integrantes p{
+        font-size: 12px;
+        margin-bottom: 40px;
     }
 }
 
 /*integrantes tablets*/
 
 @media (min-width: 600px) {
-    body{
-        font-size: 20px;
+    .integrantes{
+        width: 100%;
     }
     .title-integrantes{
-        font-size: 25px;
-    }
-    .title-cada{
-        font-size: 22px;
-    }
-}
-
-/*integrantes desktop*/
-
-@media (min-width: 1366px) {
-    body{
-        font-size: 15px;
-    }
-    .title-integrantes{
-        font-size: 20px;
-    }
-    .title-cada{
         font-size: 18px;
     }
-    .integrantes{
-        width: 100vh;
+    .title-cada{
+        font-size: 16px;
     }
-    .grid-integrantes{
-        grid-template-columns: repeat(2, 1fr);
+    .grid-integrantes p{
+        font-size: 14px;
     }
 }
+
+/*canciones mobile*/
+
+@media (max-width: 768px) {
+    .cd-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+        margin-top: 40px;
+        padding: 8px;
+    }
+    .cd-grid div h1, h2, h3, h4, h5, h6{
+        font-size: 16px;
+    }
+    .cd-grid p{
+        font-size: 14px;
+    }
+}
+
+/*canciones tablets*/
