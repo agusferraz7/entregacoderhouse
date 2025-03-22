@@ -133,13 +133,15 @@ p{
 
 .flex-redes{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    height: 100%;
 }
 
 .ul-redes{
     display: flex;
     gap: 20px;
     margin-top: 50px;
+    padding: 0;
 }
 
 .flex-redes ul img:hover{
@@ -150,8 +152,9 @@ p{
 .redes-bg{
     background-image: url(img/imagen2.jpg);
     background-size: cover;
-    height: 100vh;
+    background-position: top;
     width: 100%;
+    height: 90vh;
 }
 
 ul li{
@@ -328,16 +331,19 @@ footer{
 /*contacto mobile*/
 
 @media (max-width: 768px) {
-
-}
-
-/*contacto tablets*/
-
-@media (min-width: 768px) {
+    .redes{
+        width: 40px;
+    }
     .ul-redes{
-        gap: 20px;
+        margin-top: 20px;
+    }
+    .flex-redes ul img:hover{
+        border: 3px solid rgba(177, 21, 21, 0.736);
     }
     .redes-bg{
-        width: 50%;
+        background-image: url(img/imagen2.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 90vh;
     }
 }
