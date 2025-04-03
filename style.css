@@ -14,6 +14,8 @@ body{
 .navbar-brand img{
     width: 60px;
     height: auto;
+    border: 2px solid rgba(181, 178, 178, 0.849);
+    border-radius: 100%;
 }
 
 .buick-bg{
@@ -32,17 +34,7 @@ body{
     align-items: center;
 }
 
-/* index - general */
-
-h2, h3, h4, h5, h6{
-    font-size: 18px;
-    color: rgba(177, 21, 21, 0.736);
-    font-weight: bold;
-}
-
-p{
-    color: rgb(227, 221, 213);
-}
+/* index  */
 
 .portada{
     width: 100%;
@@ -52,62 +44,71 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     width: 100%;
 }
 
-.index-title{
-    font-size: 25px;
+.flex-section div .index-title{
+    font-size: 30px;
     font-weight: bold;
     color: rgb(227, 221, 213);
     background-color: rgba(177, 21, 21, 0.736);
     padding: 10px;
-    width: 50%;
+    width: 100%;
     border-radius: 4px 0 0 4px;
 }
 
-.index-p {
+.flex-section div p{
+    color: rgb(181, 178, 178);
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.img-tres{
+.img-vertical{
     width: 30%;
     padding: 20px;
     border-radius: 0 30px 30px 0;
 }
 
+.video-flex{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
 .video{
-    width: 100%;
+    width: 75%;
     height: 100vh;
 }
 
 /* integrantes */
 
 .title-integrantes{
+    font-size: 36px;
+    color: rgba(181, 178, 178, 0.849);
+    font-weight: bold;
     text-align: center;
     margin: 50px 0 50px 0;
 }
 
 .grid-integrantes{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5px;
+    grid-template-columns: 1fr;
 }
 
 .integrantes{
-    width: 50%;
-    border-radius: 5px;
+    width: 70%;
 }
 
 .title-cada{
-    font-size: 16px;
-    margin-top: 5px;
+    color: rgba(177, 21, 21, 0.736);
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 .grid-integrantes p{
+    color: rgba(181, 178, 178, 0.849);
     font-size: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 /* canciones */
@@ -202,113 +203,101 @@ footer{
 /*index mobile*/
 
 @media (max-width: 768px) {
-    .portada{
-        margin-top: 0;
-        padding: 0;
-    }
-    .index-title{
+    .flex-section div h1.index-title{
         font-size: 20px;
         padding: 5px;
         width: 100%;
-        border-radius: 0 4px 4px 0;
-        margin-top: 10px;
+        border-radius: 4px 0 0 4px;
     }
-    .index-p {
-        margin-top: 10px;
+    main .flex-section div p{
         font-size: 16px;
-        padding-left: 5px;
     }
-    .img-tres{
-        width: 60%;
-        padding-right: 0;
-        border-radius: 25px 0 0 25px;
+
+    main .flex-section .img-vertical{
+        width: 70%;
+        padding: 10px;
+        border-radius: 0 30px 30px 0;
+    }
+    
+    .video-flex{
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+    }
+    
+    .video-flex .video{
+        width: 100%;
     }
 }
 
 /*index tablets*/
 
-@media (min-width: 600px) {
+@media (max-width: 1024px) {
     .portada{
         padding: 0;
     }
     .flex-section{
-        padding: 10px 0;
+        padding: 50px;
     }
-    .index-title{
-        font-size: 30px;
-        width: 60%;
-        border-radius: 0 4px 4px 0;
+    
+    .flex-section div .index-title{
+        font-size: 25px;
+        color: rgb(227, 221, 213);
+        padding: 8px;
+        width: 85%;
+        border-radius: 4px 0 0 4px;
     }
-    .index-p {
-        font-size: 22px;
-        padding-left: 10px;
+    
+    .flex-section div p{
+        font-size: 20px;
     }
-    .img-tres{
+    
+    .img-vertical{
         width: 50%;
-        padding-right: 0;
-        border-radius: 30px 0 0 30px;
+        border-radius: 0 30px 30px 0;
+    }
+    
+    .video-flex{
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+    }
+    
+    .video{
+        width: 90%;
+        height: 50vh;
     }
 }
 
 /*index desktop*/
 
 @media (min-width: 1024px) {
-    .flex-section{
-        padding: 0;
-    }
-    .index-title{
-        font-size: 25px;
-        width: 60%;
-        border-radius: 0 4px 4px 0;
-    }
-    .index-p {
-        font-size: 20px;
-        padding-left: 10px;
-    }
-    .img-tres{
-        width: 50%;
-        height: 100vh;
-        padding-right: 0;
-        border-radius: 30px 0 0 30px;
-    }
 }
 
 /*integrantes mobile*/
 
 @media (max-width: 768px) {
-    .grid-integrantes{
-        grid-template-columns: 1fr;
-    }
-    .title-integrantes{
-    font-size: 16px;
-    }
     .integrantes{
-        width: 100%;
+        width: 90%;
     }
-    .title-cada{
-        font-size: 14px;
+    main .grid-integrantes div .title-cada{
+        font-size: 16px;
         margin-top: 5px;
     }
-    .grid-integrantes p{
-        font-size: 12px;
-        margin-bottom: 40px;
+    .grid-integrantes div p{
+        font-size: 14px;
     }
 }
 
 /*integrantes tablets*/
 
-@media (min-width: 600px) {
-    .integrantes{
-        width: 100%;
-    }
-    .title-integrantes{
-        font-size: 18px;
-    }
-    .title-cada{
-        font-size: 16px;
+@media (max-width: 1024px) {
+    .grid-integrantes div .title-cada{
+        font-size: 22px;
     }
     .grid-integrantes p{
-        font-size: 14px;
+        font-size: 20px;
+        margin-bottom: 35px;
     }
 }
 
