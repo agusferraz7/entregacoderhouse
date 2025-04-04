@@ -34,10 +34,16 @@ body{
     align-items: center;
 }
 
+div ul img:hover{
+    border: 4px solid rgba(177, 21, 21, 0.736);
+    border-radius: 100%;
+}
+
 /* index  */
 
 .portada{
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .flex-section{
@@ -54,7 +60,6 @@ body{
     background-color: rgba(177, 21, 21, 0.736);
     padding: 10px;
     width: 100%;
-    border-radius: 4px 0 0 4px;
 }
 
 .flex-section div p{
@@ -65,8 +70,6 @@ body{
 
 .img-vertical{
     width: 30%;
-    padding: 20px;
-    border-radius: 0 30px 30px 0;
 }
 
 .video-flex{
@@ -101,6 +104,7 @@ body{
 
 .title-cada{
     color: rgba(177, 21, 21, 0.736);
+    font-weight: bold;
     font-size: 18px;
     margin-top: 10px;
 }
@@ -113,29 +117,72 @@ body{
 
 /* canciones */
 
+.cd-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 40px;
+    margin: 50px;
+}
+
+.bg-discos{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./discos/imagencd.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bg-discos:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0px 20px rgba(177, 21, 21, 0.736);
+}
+
+.style-songs{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    width: 100%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.style-songs:hover{
+    color: rgba(177, 21, 21, 0.736);
+}
+
 .decoration-none a{
+    font-size: 14px;
     text-decoration: none;
-    color: rgb(181, 178, 178);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
 }
 
 .decoration-none a:hover{
-    color: rgb(255, 255, 255);
     border-bottom: 2px solid rgba(177, 21, 21, 0.736);
-}
-
-.cd-grid{
-    height: 90vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 70px;
-    margin-top: 50px;
 }
 
 /* fotos de shows */
 
 .fotos-title-style{
+    color: rgba(181, 178, 178, 0.849);
+    font-weight: bold;
     margin: 30px;
     text-align: center;
+}
+
+h1.fotos-title-style{
+    font-size: 36px;
 }
 
 .pics-grid img{
@@ -203,28 +250,24 @@ footer{
 /*index mobile*/
 
 @media (max-width: 768px) {
+    .portada{
+        margin: 0;
+    }
     .flex-section div h1.index-title{
         font-size: 20px;
         padding: 5px;
         width: 100%;
-        border-radius: 4px 0 0 4px;
     }
     main .flex-section div p{
         font-size: 16px;
     }
-
     main .flex-section .img-vertical{
-        width: 70%;
-        padding: 10px;
-        border-radius: 0 30px 30px 0;
+        width: 60%;
+        padding: 5px;
     }
-    
     .video-flex{
-        display: flex;
-        justify-content: center;
-        padding: 0px;
+        padding: 0;
     }
-    
     .video-flex .video{
         width: 100%;
     }
@@ -234,44 +277,61 @@ footer{
 
 @media (max-width: 1024px) {
     .portada{
+        width: 100%;
         padding: 0;
+        margin-bottom: 50px;
     }
     .flex-section{
-        padding: 50px;
+        padding: 35px;
     }
-    
     .flex-section div .index-title{
-        font-size: 25px;
-        color: rgb(227, 221, 213);
-        padding: 8px;
-        width: 85%;
-        border-radius: 4px 0 0 4px;
+        font-size: 30px;
+        padding: 10px;
+        width: 95%;
     }
-    
     .flex-section div p{
-        font-size: 20px;
+        color: rgb(181, 178, 178);
+        margin-top: 20px;
+        font-size: 25px;
     }
-    
     .img-vertical{
-        width: 50%;
-        border-radius: 0 30px 30px 0;
+        width: 30%;
     }
-    
     .video-flex{
-        display: flex;
-        justify-content: center;
         padding: 0px;
+        margin-top: 50px;
     }
-    
     .video{
-        width: 90%;
-        height: 50vh;
+        width: 100%;
     }
 }
 
 /*index desktop*/
 
 @media (min-width: 1024px) {
+    .portada{
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .flex-section{
+        padding: 35px;
+    }
+    .flex-section div .index-title{
+        font-size: 26px;
+        padding: 10px;
+        width: 88%;
+    }
+    .flex-section div p{
+        margin-top: 20px;
+        font-size: 20px;
+        padding: 10px;
+    }
+    .img-vertical{
+        width: 35%;
+    }
+    .video{
+        width: 100%;
+    }
 }
 
 /*integrantes mobile*/
@@ -306,39 +366,38 @@ footer{
 @media (max-width: 768px) {
     .cd-grid{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 50px;
-        margin-top: 35px;
+        grid-template-columns: 1fr;
+    }    
+    .bg-discos:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0px 20px rgba(177, 21, 21, 0.736);
     }
-    .cd-grid div h1, h2, h3, h4, h5, h6{
+    .style-songs{
+        font-size: 20px;
+        color: rgba(177, 21, 21, 0.736);
+    }
+    .decoration-none a{
         font-size: 16px;
-    }
-    .cd-grid p{
-        font-size: 14px;
+        color: rgb(227, 221, 213);
+        font-weight: bold;
     }
 }
 
 /*canciones tablets*/
 
-@media (min-width: 600px) {
+@media (max-width: 1024px) {
     .cd-grid{
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 0;
-        height: 85vh;
+        display: grid;
+        column-gap: 40px;
+        row-gap: 40px;
+        margin: 50px;
     }
-    .cd-grid div h1, h2, h3, h4, h5, h6{
-        font-size: 20px;
+    .style-songs{
+        font-size: 22px;
+        color: rgba(177, 21, 21, 0.736);
     }
-    .cd-grid p{
-        font-size: 17px;
-    }
-}
-
-/*canciones desktop*/
-
-@media (min-width: 1024px) {
-    .cd-grid{
-        grid-template-columns: repeat(3, 1fr);
+    .decoration-none a{
+        font-size: 16px;
     }
 }
 
