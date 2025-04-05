@@ -24,6 +24,8 @@ body{
 
 .navbar-nav li a{
     color: rgba(181, 178, 178, 0.849);
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .navbar-nav li a:hover{
@@ -145,7 +147,43 @@ div ul img:hover{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.bg-discos:hover {
+.bg-discos-dos{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./discos/imagen4copia.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bg-discos-tres{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./discos/imagencopia.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bg-discos:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(177, 21, 21, 0.736);
+}
+
+.bg-discos-dos:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(177, 21, 21, 0.736);
+}
+
+.bg-discos-tres:hover{
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(177, 21, 21, 0.736);
 }
